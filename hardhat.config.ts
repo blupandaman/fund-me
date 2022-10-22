@@ -15,7 +15,11 @@ const REPORT_GAS = process.env.REPORT_GAS || false;
 
 const config: HardhatUserConfig = {
   solidity: "0.8.17",
+  defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+      chainId: 31337,
+    },
     goerli: {
       url: GOERLI_RPC_URL,
       accounts: [PRIVATE_KEY],
